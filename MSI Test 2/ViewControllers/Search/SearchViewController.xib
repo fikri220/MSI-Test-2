@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="MSI_Test_2" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="kRl-kW-oOH" id="Des-QA-kfj"/>
+                <outlet property="tableview" destination="Jbc-Id-vD4" id="FSE-DH-H0W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kRl-kW-oOH">
+                    <rect key="frame" x="24" y="64" width="366" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="QLr-Vg-ktz"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-Pu-uno">
+                    <rect key="frame" x="260" y="373" width="130" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JQF-hq-Pbj"/>
+                        <constraint firstAttribute="width" constant="130" id="yao-3o-iaR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="FIND DOCTOR">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickedDoctor:" destination="-1" eventType="touchUpInside" id="5tI-5c-qMq"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-Id-vD4">
+                    <rect key="frame" x="0.0" y="118" width="414" height="240"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="Jff-JE-deU"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kRl-kW-oOH" secondAttribute="trailing" constant="24" id="2Fb-G6-LRd"/>
+                <constraint firstItem="Jbc-Id-vD4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4HM-9d-dqP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yuI-Pu-uno" secondAttribute="trailing" constant="24" id="5SR-GO-iIh"/>
+                <constraint firstItem="yuI-Pu-uno" firstAttribute="top" secondItem="Jbc-Id-vD4" secondAttribute="bottom" constant="15" id="Dxf-50-wev"/>
+                <constraint firstItem="Jbc-Id-vD4" firstAttribute="top" secondItem="kRl-kW-oOH" secondAttribute="bottom" constant="10" id="EIW-Rb-7xK"/>
+                <constraint firstItem="Jbc-Id-vD4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="I9L-DM-WaC"/>
+                <constraint firstItem="kRl-kW-oOH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dHu-2A-rEi"/>
+                <constraint firstItem="kRl-kW-oOH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="maJ-7a-9dT"/>
+            </constraints>
+            <point key="canvasLocation" x="121.73913043478262" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
